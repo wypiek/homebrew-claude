@@ -26,6 +26,11 @@ src/*.css  +  themes/homebrew-channel-colors.json  +  assets/generated/*.webp
 - `scripts/check-selectors.js`: paste into T3 Code's DevTools console after a
   T3 Code update to check the theme's selectors still match.
 - `docs/DEVELOPMENT.md`: build, add a color, release steps and limits.
+- `claude-app/`: the same look as a Claude Code plugin for the Claude desktop
+  and mobile apps. `scripts/build-claude-mod.py` writes its
+  `hooks/variants.ts` (never edit that by hand) from the palettes, `THEMES`,
+  the bubble CSS and `make-backgrounds.py`'s settings. Rebuild it whenever
+  those change. Its scene must stay pure vector SVG under 131,072 characters.
 
 ## Rules
 

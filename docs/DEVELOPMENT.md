@@ -40,6 +40,27 @@ After the first publish, switch by id: `t3 theme set homebrew-channel-pink`.
 
 The build script minifies the CSS inside each theme file. The files in `src/` keep their comments.
 
+## Claude app
+
+`claude-app/` is the same look as a Claude Code plugin for the Claude desktop and
+mobile apps. The app cannot embed pictures in a theme, so
+`scripts/build-claude-mod.py` redraws the water and bubbles as an animated SVG. It
+reads the palettes and `THEMES` from `build-theme.py`, the recoloring settings from
+`make-backgrounds.py` and the bubble layout from `src/hbc-bubbles-fast.css`, and
+writes `claude-app/hooks/variants.ts`. Run it after changing any of those (Python
+3.10 or later; Node, if installed, checks every palette):
+
+```sh
+python scripts/build-claude-mod.py
+claude plugin validate claude-app
+claude plugin test claude-app
+```
+
+To try a change, install from your local copy once (`claude plugin marketplace add
+.` then `claude plugin install homebrew-channel@homebrew-claude`) and run
+`/reload-plugins` after each build. Check a normal and a narrow window, and the
+mobile app if you can.
+
 ## Install every theme
 
 macOS:

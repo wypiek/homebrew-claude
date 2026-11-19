@@ -1,3 +1,4 @@
 __pycache__/
 *.pyc
 .impeccable/
+claude-app/.claude-plugin/types/

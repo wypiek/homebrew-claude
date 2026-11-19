@@ -1,0 +1,32 @@
+{
+  "name": "homebrew-channel",
+  "version": "0.1.0",
+  "description": "The Homebrew Channel look for the Claude app: underwater background, rising bubbles and Wii-blue accents.",
+  "author": {
+    "name": "Marcel R"
+  },
+  "license": "GPL-2.0-or-later",
+  "userConfig": {
+    "color": {
+      "type": "string",
+      "title": "Homebrew Channel color",
+      "description": "The water, bubble and accent color. Also changed with /homebrew-color.",
+      "default": "default",
+      "options": [
+        "default",
+        "no-background",
+        "pink",
+        "red",
+        "yellow",
+        "green",
+        "purple",
+        "orange",
+        "grey",
+        "teal",
+        "gold",
+        "magenta",
+        "indigo"
+      ]
+    }
+  }
+}

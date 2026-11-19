@@ -1,0 +1,14 @@
+{
+  "name": "homebrew-claude",
+  "owner": {
+    "name": "Marcel R"
+  },
+  "description": "The Homebrew Channel theme for the Claude app.",
+  "plugins": [
+    {
+      "name": "homebrew-channel",
+      "source": "./claude-app",
+      "description": "The Homebrew Channel look for the Claude app: underwater background, rising bubbles and Wii-blue accents."
+    }
+  ]
+}
